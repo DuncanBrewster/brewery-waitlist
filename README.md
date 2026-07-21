@@ -84,6 +84,7 @@ Real brewery data from the API; waitlist/seat state faked by you.
 Should be usable on mobile; a little keyboard/contrast hygiene is a plus."
 
 <br>
+
 **CoPilot:**
 
 I'll save a concise implementation plan to session memory, then show it here for review.
