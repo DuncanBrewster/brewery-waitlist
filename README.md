@@ -151,7 +151,7 @@ Would you like me to (A) scaffold the Vite project and create these files, or (B
 
 **Agent Mode Prompt:**
 
-This looks good. Let's scaffold the project in smaller chunks though to reduce complexity and make debugging easier. Start by generating the package.json, index.html, src/main.jsx, and src/App.jsx files
+"This looks good. Let's scaffold the project in smaller chunks though to reduce complexity and make debugging easier. Start by generating the package.json, index.html, src/main.jsx, and src/App.jsx files"
 
 
 **CoPilot:**
