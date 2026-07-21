@@ -48,17 +48,13 @@ export default function App() {
         <p className="app-eyebrow">San Diego Brewery waitlist</p>
         <h1>Find a brewery and join the line</h1>
         <p className="app-description">
-          Browse a fresh list of San Diego breweries with seat availability, then join or leave the waitlist in the browser.
-          Status is stored locally so your choices stay after refresh.
+          Discover San Diego breweries and join their waitlist.
         </p>
       </header>
 
       <section className="status-bar">
         <div className="status-chip">
-          <strong>{waitingCount}</strong> {waitingCount === 1 ? 'brewery in line' : 'breweries in line'}
-        </div>
-        <div className="status-note">
-          Tip: availability is seeded locally and shown as Low / Medium / High.
+          You're in line for <strong>{waitingCount}</strong> {waitingCount === 1 ? 'brewery' : 'breweries'}
         </div>
       </section>
 

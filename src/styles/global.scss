@@ -44,7 +44,7 @@ img {
 .app-header {
   padding: 24px 24px 28px;
   border: 1px solid rgba(148, 163, 184, 0.15);
-  background: rgba(15, 23, 42, 0.9);
+  background: vars.$surface-strong;
   border-radius: vars.$radius;
   box-shadow: vars.$shadow;
 }
@@ -80,7 +80,7 @@ img {
 
 .status-chip {
   color: vars.$text-primary;
-  background: #111827;
+  background: vars.$surface-strong;
   border: 1px solid rgba(148, 163, 184, 0.12);
   padding: 14px 18px;
   border-radius: vars.$radius-sm;
@@ -100,7 +100,7 @@ img {
 .brewery-card {
   padding: 20px;
   border-radius: vars.$radius;
-  background: rgba(15, 23, 42, 0.95);
+  background: vars.$surface-strong;
   border: 1px solid rgba(148, 163, 184, 0.12);
   box-shadow: vars.$shadow;
 }
@@ -139,13 +139,13 @@ img {
   transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.brewery-button:hover {
-  transform: translateY(-1px);
+.brewery-button.join {
+  background: vars.$accent-button;
+  color: #0f172a;
 }
 
-.brewery-button.join {
-  background: vars.$accent-strong;
-  color: #0f172a;
+.brewery-button:hover {
+  background: vars.$accent-button-hover;
 }
 
 .brewery-button.leave {
@@ -167,7 +167,7 @@ img {
 
 .availability-badge.low {
   background: rgba(52, 211, 153, 0.16);
-  color: vars.$success;
+  color: vars.$danger;
 }
 
 .availability-badge.medium {
@@ -177,7 +177,7 @@ img {
 
 .availability-badge.high {
   background: rgba(248, 113, 113, 0.16);
-  color: vars.$danger;
+  color: vars.$success;
 }
 
 .loading-state,
@@ -197,7 +197,7 @@ img {
 }
 
 .error-state button {
-  background: vars.$accent-strong;
+  background: vars.$accent-button;
   color: #0f172a;
   border: none;
   padding: 10px 14px;
