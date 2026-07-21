@@ -148,11 +148,13 @@ Seat availability source: if you later want dynamic updates, add a small simulat
 Would you like me to (A) scaffold the Vite project and create these files, or (B) generate component stubs and the hook next?
 
 <br>
+
 **Agent Mode Prompt:**
 
 "This looks good. Let's scaffold the project in smaller chunks though to reduce complexity and make debugging easier. Start by generating the package.json, index.html, src/main.jsx, and src/App.jsx files"
 
 <br>
+
 **CoPilot:**
 
 "I'll add a short todo plan for the scaffold steps."
@@ -186,11 +188,13 @@ App.jsx
 Next I'll implement the useBreweries hook and the BreweryList / BreweryCard components. Proceed?
 
 <br>
+
 **Prompt:**
 
 "Proceed with implementing useBreweries hook and the BreweryList, BreweryCard, and AvailabilityBadge components"
 
 <br>
+
 **CoPilot:**
 
 I'll update the todo list to mark the scaffold step complete and start the hook/components implementation, then add the new files.
@@ -198,11 +202,13 @@ I'll update the todo list to mark the scaffold step complete and start the hook/
 Progress update: I added the useBreweries hook and three components (AvailabilityBadge, BreweryCard, BreweryList). Next I'll integrate these into App.jsx and add local waitlist state (persisted to localStorage). Proceed?
 
 <br>
+
 **Prompt:**
 
 "Yes, integrate these into App.jsx and add local waitlist state (persisted to localStorage)"
 
 <br>
+
 **CoPilot:**
 
 Checking the current App.jsx and relevant component file before integrating state and hook.
@@ -224,11 +230,13 @@ hook-driven brewery list rendering
 Next I can add styles and verify the app with npm install + npm run dev.
 
 <br>
+
 **Prompt:**
 
 "Add scss styling file. Move inline-styling in existing files to new scss files. Use a dark color palette"
 
 <br>
+
 **CoPilot:**
 
 Reading current app and component sources so I can safely replace inline styles with SCSS classes.
@@ -257,11 +265,13 @@ AvailabilityBadge.jsx
 Everything is now using CSS class names and the app has a dark theme with higher contrast, consistent card/badge/button styling. Next step is to run it and verify the UI works end-to-end.
 
 <br>
+
 **Prompt:**
 
 "/init"
 
 <br>
+
 **CoPilot:**
 
 Exploring the workspace for existing AI customization or documentation files before creating guidance.
@@ -290,11 +300,13 @@ AGENTS.md — explains build commands, key files, architecture, conventions, and
 If you want, I can also add a .github/copilot-instructions.md variant or extend this into a custom skill for frontend updates.
 
 <br>
+
 **Prompt:**
 
 "Add a search bar component and filter by name, type, or availability"
 
 <br>
+
 **CoPilot:**
 
 Adding a SearchBar component, styles, and wiring filters in App.jsx (query/type/availability). I'll update three files.
@@ -315,11 +327,13 @@ Updated App.jsx (filter state + filteredBreweries)
 Progress: search UI implemented and connected. Next would be to run the dev server to verify behavior — want me to run npm run dev and check in the browser?
 
 <br>
+
 **Prompt:**
 
 "(I denied changes) Add a search bar component that can search and show live results by name, type, or availability"
 
 <br>
+
 **CoPilot:**
 
 I'll update the todo list then read current files to determine required edits.
