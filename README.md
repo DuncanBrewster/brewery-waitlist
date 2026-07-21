@@ -24,7 +24,7 @@ Run the project locally from the command line:
 **Tradeoff**
 
 - Used SCSS instead of Tailwind sacrificing extra files for less cluttered JSX files, Variables, and scaling. I would utilize CSS Modules for its scoping if this project was to scale, and SCSS works great with CSS Modules while Tailwind does not.
-
+<br>
 
 **If I Had More Time**
 
@@ -201,7 +201,7 @@ Progress update: I added the useBreweries hook and three components (Availabilit
 
 **Prompt:**
 
-Yes, integrate these into App.jsx and add local waitlist state (persisted to localStorage)
+"Yes, integrate these into App.jsx and add local waitlist state (persisted to localStorage)"
 
 
 **CoPilot:**
@@ -317,7 +317,7 @@ Progress: search UI implemented and connected. Next would be to run the dev serv
 
 **Prompt:**
 
-(I denied changes) "Add a search bar component that can search and show live results by name, type, or availability"
+"(I denied changes) Add a search bar component that can search and show live results by name, type, or availability"
 
 
 **CoPilot:**
