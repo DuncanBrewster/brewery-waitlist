@@ -31,6 +31,8 @@ Run the project locally from the command line:
 - Rename SCSS variables to more intuitive names
 - Fix styling issues. e.g. brewery button alignment
 - Migrate functions from App.jsx into components to keep App.jsx lean
+- Add minimal comments in code explaining functions
+- Add a cleaner error state for user experience
 
 
 
