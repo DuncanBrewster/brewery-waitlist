@@ -1,0 +1,230 @@
+@use './variables' as vars;
+
+:root {
+  color: vars.$text-primary;
+  background: vars.$bg;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #111827 0%, #0b1120 100%);
+}
+
+button {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(96, 165, 250, 0.6);
+  outline-offset: 3px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.app-shell {
+  width: min(1080px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 48px;
+}
+
+.app-header {
+  padding: 24px 24px 28px;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: vars.$radius;
+  box-shadow: vars.$shadow;
+}
+
+.app-eyebrow {
+  margin: 0;
+  font-size: 0.9rem;
+  color: vars.$accent;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.app-header h1 {
+  margin: 16px 0 12px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
+.app-description {
+  margin: 0;
+  max-width: 760px;
+  color: vars.$text-muted;
+}
+
+.status-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  margin: 26px 0;
+}
+
+.status-chip {
+  color: vars.$text-primary;
+  background: #111827;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  padding: 14px 18px;
+  border-radius: vars.$radius-sm;
+  font-weight: 700;
+}
+
+.status-note {
+  color: vars.$text-muted;
+}
+
+.brewery-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.brewery-card {
+  padding: 20px;
+  border-radius: vars.$radius;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  box-shadow: vars.$shadow;
+}
+
+.brewery-card h2 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+
+.brewery-meta {
+  margin: 0;
+  color: vars.$text-muted;
+  font-size: 0.95rem;
+}
+
+.brewery-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.brewery-card-footer {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.brewery-button {
+  min-width: 148px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.brewery-button:hover {
+  transform: translateY(-1px);
+}
+
+.brewery-button.join {
+  background: vars.$accent-strong;
+  color: #0f172a;
+}
+
+.brewery-button.leave {
+  background: transparent;
+  color: vars.$accent;
+  border-color: rgba(96, 165, 250, 0.4);
+}
+
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.availability-badge.low {
+  background: rgba(52, 211, 153, 0.16);
+  color: vars.$success;
+}
+
+.availability-badge.medium {
+  background: rgba(245, 158, 11, 0.16);
+  color: vars.$warning;
+}
+
+.availability-badge.high {
+  background: rgba(248, 113, 113, 0.16);
+  color: vars.$danger;
+}
+
+.loading-state,
+.error-state,
+.empty-state {
+  padding: 28px;
+  text-align: center;
+  border-radius: vars.$radius;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  color: vars.$text-muted;
+}
+
+.error-state p {
+  color: vars.$danger;
+  margin-bottom: 14px;
+}
+
+.error-state button {
+  background: vars.$accent-strong;
+  color: #0f172a;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    width: calc(100% - 24px);
+    padding-top: 16px;
+  }
+
+  .app-header {
+    padding: 18px 18px 22px;
+  }
+
+  .status-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .brewery-card-footer {
+    justify-content: stretch;
+  }
+
+  .brewery-button {
+    width: 100%;
+  }
+}
