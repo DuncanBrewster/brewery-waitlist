@@ -97,6 +97,39 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
+.search-bar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 18px 0;
+}
+
+.search-input {
+  flex: 1 1 320px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.08);
+  background: rgba(255,255,255,0.03);
+  color: vars.$text-primary;
+  font-weight: 700;
+}
+
+.search-select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.06);
+  background: rgba(255,255,255,0.02);
+  color: vars.$text-primary;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
 .brewery-card {
   padding: 20px;
   border-radius: vars.$radius;

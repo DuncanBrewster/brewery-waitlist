@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react'
 import useBreweries from './hooks/useBreweries'
 import BreweryList from './components/BreweryList'
+import SearchBar from './components/SearchBar'
 
 const STORAGE_KEY = 'brewery-waitlist-status'
 
@@ -24,6 +25,9 @@ function saveWaitlist(waitlist) {
 
 export default function App() {
   const { breweries, loading, error, refetch } = useBreweries()
+  const [query, setQuery] = useState('')
+  const [filterType, setFilterType] = useState('All')
+  const [filterAvailability, setFilterAvailability] = useState('All')
   const [waitlistMap, setWaitlistMap] = useState(() => loadWaitlist())
 
   useEffect(() => {
@@ -34,6 +38,18 @@ export default function App() {
     () => Object.values(waitlistMap).filter(Boolean).length,
     [waitlistMap],
   )
+
+  const filteredBreweries = useMemo(() => {
+    const q = query.trim().toLowerCase()
+    return breweries.filter((b) => {
+      if (filterType !== 'All' && b.brewery_type !== filterType) return false
+      if (filterAvailability !== 'All' && b.availability !== filterAvailability) return false
+      if (!q) return true
+      const name = (b.name || '').toLowerCase()
+      const type = (b.brewery_type || '').toLowerCase()
+      return name.includes(q) || type.includes(q) || b.availability?.toLowerCase().includes(q)
+    })
+  }, [breweries, query, filterType, filterAvailability])
 
   const handleToggleWaitlist = useCallback((breweryId) => {
     setWaitlistMap((current) => ({
@@ -58,9 +74,14 @@ export default function App() {
         </div>
       </section>
 
+      <SearchBar
+        query={query}
+        setQuery={setQuery}
+      />
+
       <main>
         <BreweryList
-          breweries={breweries}
+          breweries={filteredBreweries}
           loading={loading}
           error={error}
           onRetry={refetch}
