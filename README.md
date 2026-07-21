@@ -5,7 +5,8 @@
 - Manages client-side waitlist state in React and persists it locally using localStorage.
 - Uses SCSS for styling.
 
-- Clone the project using command:
+
+Clone the project using command:
 
 `git clone https://github.com/DuncanBrewster/brewery-waitlist.git`
 
